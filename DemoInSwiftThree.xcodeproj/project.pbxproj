@@ -15,6 +15,12 @@
 		35CE04711D9695970087B0D0 /* DemoInSwiftThreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE04701D9695970087B0D0 /* DemoInSwiftThreeUITests.swift */; };
 		35CE04821D9698220087B0D0 /* HotelDetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */; };
 		35CE04831D9698220087B0D0 /* HotelDetailContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */; };
+		35EA611C1D96C363007208B0 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61191D96C363007208B0 /* APIController.swift */; };
+		35EA611D1D96C363007208B0 /* BasicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA611A1D96C363007208B0 /* BasicRequest.swift */; };
+		35EA611E1D96C363007208B0 /* APIController + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA611B1D96C363007208B0 /* APIController + Utils.swift */; };
+		35EA61211D96F26E007208B0 /* APIController + Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61201D96F26E007208B0 /* APIController + Hotel.swift */; };
+		35EA61231D96F2FA007208B0 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61221D96F2FA007208B0 /* APIEndpoints.swift */; };
+		35EA61261D96F5DF007208B0 /* JSONParseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61251D96F5DF007208B0 /* JSONParseable.swift */; };
 		AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		35CE04721D9695970087B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelDetailContainerViewController.swift; sourceTree = "<group>"; };
 		35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelDetailContainerViewController.xib; sourceTree = "<group>"; };
+		35EA61191D96C363007208B0 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		35EA611A1D96C363007208B0 /* BasicRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRequest.swift; sourceTree = "<group>"; };
+		35EA611B1D96C363007208B0 /* APIController + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIController + Utils.swift"; sourceTree = "<group>"; };
+		35EA61201D96F26E007208B0 /* APIController + Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIController + Hotel.swift"; sourceTree = "<group>"; };
+		35EA61221D96F2FA007208B0 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		35EA61251D96F5DF007208B0 /* JSONParseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseable.swift; sourceTree = "<group>"; };
 		3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.release.xcconfig"; sourceTree = "<group>"; };
 		8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				35CE044D1D9695970087B0D0 /* AppDelegate.swift */,
+				35EA611F1D96F211007208B0 /* Service */,
+				35EA61241D96F58A007208B0 /* Model */,
 				35CE047E1D9695AC0087B0D0 /* Main */,
 				35CE04541D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld */,
 				35CE047F1D9695D70087B0D0 /* Supporting Files */,
@@ -149,6 +163,26 @@
 				35CE045C1D9695970087B0D0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35EA611F1D96F211007208B0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				35EA61191D96C363007208B0 /* APIController.swift */,
+				35EA61221D96F2FA007208B0 /* APIEndpoints.swift */,
+				35EA611A1D96C363007208B0 /* BasicRequest.swift */,
+				35EA611B1D96C363007208B0 /* APIController + Utils.swift */,
+				35EA61201D96F26E007208B0 /* APIController + Hotel.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		35EA61241D96F58A007208B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35EA61251D96F5DF007208B0 /* JSONParseable.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9DFD882F8EC4DD89906FEFC9 /* Pods */ = {
@@ -353,9 +387,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA611E1D96C363007208B0 /* APIController + Utils.swift in Sources */,
+				35EA611D1D96C363007208B0 /* BasicRequest.swift in Sources */,
+				35EA611C1D96C363007208B0 /* APIController.swift in Sources */,
+				35EA61261D96F5DF007208B0 /* JSONParseable.swift in Sources */,
+				35EA61231D96F2FA007208B0 /* APIEndpoints.swift in Sources */,
 				35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */,
 				35CE044E1D9695970087B0D0 /* AppDelegate.swift in Sources */,
 				35CE04821D9698220087B0D0 /* HotelDetailContainerViewController.swift in Sources */,
+				35EA61211D96F26E007208B0 /* APIController + Hotel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
