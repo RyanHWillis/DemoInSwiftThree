@@ -1,9 +1,9 @@
 //
 //  JSONParseable.swift
-//  touch-ios
+//  DemoInSwiftThree
 //
-//  Created by ryan on 26/07/2016.
-//  Copyright © 2016 Dreamr. All rights reserved.
+//  Created by Ryan Willis on 24/09/2016.
+//  Copyright © 2016 RyanWillis. All rights reserved.
 //
 
 import Foundation
