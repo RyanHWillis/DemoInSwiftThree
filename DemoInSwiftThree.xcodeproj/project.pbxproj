@@ -15,6 +15,7 @@
 		35CE04711D9695970087B0D0 /* DemoInSwiftThreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE04701D9695970087B0D0 /* DemoInSwiftThreeUITests.swift */; };
 		35CE04821D9698220087B0D0 /* HotelDetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */; };
 		35CE04831D9698220087B0D0 /* HotelDetailContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */; };
+		AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoInSwiftThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CE044A1D9695970087B0D0 /* DemoInSwiftThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoInSwiftThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CE044D1D9695970087B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CE04551D9695970087B0D0 /* DemoInSwiftThree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoInSwiftThree.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		35CE04721D9695970087B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelDetailContainerViewController.swift; sourceTree = "<group>"; };
 		35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelDetailContainerViewController.xib; sourceTree = "<group>"; };
+		3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.release.xcconfig"; sourceTree = "<group>"; };
+		8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				35CE04641D9695970087B0D0 /* DemoInSwiftThreeTests */,
 				35CE046F1D9695970087B0D0 /* DemoInSwiftThreeUITests */,
 				35CE044B1D9695970087B0D0 /* Products */,
+				9DFD882F8EC4DD89906FEFC9 /* Pods */,
+				DD7B1CC13EBF79612076BCB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9DFD882F8EC4DD89906FEFC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */,
+				3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD7B1CC13EBF79612076BCB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35CE04751D9695970087B0D0 /* Build configuration list for PBXNativeTarget "DemoInSwiftThree" */;
 			buildPhases = (
+				9D930976DBE6301415F751D3 /* [CP] Check Pods Manifest.lock */,
 				35CE04461D9695970087B0D0 /* Sources */,
 				35CE04471D9695970087B0D0 /* Frameworks */,
 				35CE04481D9695970087B0D0 /* Resources */,
+				50E4B9F56BFBB5809BF492B7 /* [CP] Embed Pods Frameworks */,
+				CECB7F53275B7FCE18D920A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50E4B9F56BFBB5809BF492B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D930976DBE6301415F751D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CECB7F53275B7FCE18D920A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35CE04461D9695970087B0D0 /* Sources */ = {
@@ -422,6 +497,7 @@
 		};
 		35CE04761D9695970087B0D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoInSwiftThree/Info.plist;
@@ -434,6 +510,7 @@
 		};
 		35CE04771D9695970087B0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoInSwiftThree/Info.plist;
@@ -517,6 +594,7 @@
 				35CE04771D9695970087B0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35CE04781D9695970087B0D0 /* Build configuration list for PBXNativeTarget "DemoInSwiftThreeTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +603,7 @@
 				35CE047A1D9695970087B0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35CE047B1D9695970087B0D0 /* Build configuration list for PBXNativeTarget "DemoInSwiftThreeUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +612,7 @@
 				35CE047D1D9695970087B0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
