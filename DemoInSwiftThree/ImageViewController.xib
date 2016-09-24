@@ -17,10 +17,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-cj-WE2"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape-sunset-blue-sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="bL9-YT-V6X"/>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="bL9-YT-V6X" secondAttribute="trailing" id="1Yz-0M-EzB"/>
+                <constraint firstItem="bL9-YT-V6X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="48e-8V-T5T"/>
+                <constraint firstItem="bL9-YT-V6X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gv2-mf-hCl"/>
                 <constraint firstItem="UTE-cj-WE2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="H3y-3R-9DP"/>
+                <constraint firstAttribute="bottom" secondItem="bL9-YT-V6X" secondAttribute="bottom" id="Ha7-H6-CC6"/>
                 <constraint firstItem="UTE-cj-WE2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hVu-1D-28Y"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -28,4 +33,7 @@
             <point key="canvasLocation" x="102" y="-138.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="landscape-sunset-blue-sunrise" width="2144" height="1424"/>
+    </resources>
 </document>
