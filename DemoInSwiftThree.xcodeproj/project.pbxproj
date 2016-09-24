@@ -23,6 +23,10 @@
 		35EA61261D96F5DF007208B0 /* JSONParseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61251D96F5DF007208B0 /* JSONParseable.swift */; };
 		35EA61281D96F70C007208B0 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61271D96F70C007208B0 /* Hotel.swift */; };
 		35EA612A1D970A9E007208B0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61291D970A9E007208B0 /* Flight.swift */; };
+		35EA612C1D9710DD007208B0 /* ImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA612B1D9710DD007208B0 /* ImagesHeaderView.swift */; };
+		35EA612E1D9710F2007208B0 /* ImagesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA612D1D9710F2007208B0 /* ImagesHeaderView.xib */; };
+		35EA61311D9719A9007208B0 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA612F1D9719A9007208B0 /* ImageViewController.swift */; };
+		35EA61321D9719A9007208B0 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA61301D9719A9007208B0 /* ImageViewController.xib */; };
 		AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,10 @@
 		35EA61251D96F5DF007208B0 /* JSONParseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseable.swift; sourceTree = "<group>"; };
 		35EA61271D96F70C007208B0 /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		35EA61291D970A9E007208B0 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		35EA612B1D9710DD007208B0 /* ImagesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesHeaderView.swift; sourceTree = "<group>"; };
+		35EA612D1D9710F2007208B0 /* ImagesHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesHeaderView.xib; sourceTree = "<group>"; };
+		35EA612F1D9719A9007208B0 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		35EA61301D9719A9007208B0 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.release.xcconfig"; sourceTree = "<group>"; };
 		8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +163,10 @@
 			children = (
 				35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */,
 				35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */,
+				35EA612B1D9710DD007208B0 /* ImagesHeaderView.swift */,
+				35EA612D1D9710F2007208B0 /* ImagesHeaderView.xib */,
+				35EA612F1D9719A9007208B0 /* ImageViewController.swift */,
+				35EA61301D9719A9007208B0 /* ImageViewController.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -318,9 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA61321D9719A9007208B0 /* ImageViewController.xib in Resources */,
 				35CE045B1D9695970087B0D0 /* LaunchScreen.storyboard in Resources */,
 				35CE04831D9698220087B0D0 /* HotelDetailContainerViewController.xib in Resources */,
 				35CE04581D9695970087B0D0 /* Assets.xcassets in Resources */,
+				35EA612E1D9710F2007208B0 /* ImagesHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +413,9 @@
 				35EA611C1D96C363007208B0 /* APIController.swift in Sources */,
 				35EA61261D96F5DF007208B0 /* JSONParseable.swift in Sources */,
 				35EA61231D96F2FA007208B0 /* APIEndpoints.swift in Sources */,
+				35EA61311D9719A9007208B0 /* ImageViewController.swift in Sources */,
 				35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */,
+				35EA612C1D9710DD007208B0 /* ImagesHeaderView.swift in Sources */,
 				35CE044E1D9695970087B0D0 /* AppDelegate.swift in Sources */,
 				35CE04821D9698220087B0D0 /* HotelDetailContainerViewController.swift in Sources */,
 				35EA612A1D970A9E007208B0 /* Flight.swift in Sources */,
