@@ -21,7 +21,9 @@ extension APIController {
         
         APIController.execute(request: request, success: { (responseSuccess) in
             
-            guard let data = responseSuccess.result.value as? [Dictionary<String, AnyObject>] else {
+            
+            guard let payload = responseSuccess.result.value as? Dictionary<String, AnyObject>,
+                let data = payload["flights"] as? [Dictionary<String, AnyObject>] else {
                 completion(nil)
                 return
             }

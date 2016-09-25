@@ -69,7 +69,11 @@ extension FlightsViewController: InfinityTableProtocol {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        return self.tableView.dequeueReusableCell(withIdentifier: FlightTableCell.detail.identifer, for: indexPath) as! FlightTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: FlightTableCell.detail.identifer, for: indexPath) as! FlightTableViewCell
+        if let flight = self.flights?[indexPath.row] {
+            cell.refresh(withFlight: flight)
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, withLoadingCellItemForIndexPath indexPath: IndexPath) -> UITableViewCell {
@@ -81,6 +85,6 @@ extension FlightsViewController: InfinityTableProtocol {
         if loadingCell {
             return 30.0
         }
-        return 98.0
+        return 180.0
     }
 }

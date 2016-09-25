@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FlightTableViewCell" customModule="DemoInSwiftThree" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="179" id="KGk-i7-Jjw" customClass="FlightTableViewCell" customModule="DemoInSwiftThree" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="179"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43.5"/>
+                <frame key="frameInset" width="411" height="178.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pS-bz-UNT">
@@ -20,20 +20,112 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@airline" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZO-o4-GbZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@airline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZO-o4-GbZ">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@departure.airport" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JV-W6-YVe">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@arrival.airport" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-4O-Kkd">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@departure.date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-IZ-tBR">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@arrival.date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-z0-nfo">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@price" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ge-wY-0VY">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Airport:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s43-5m-XhB">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Airport:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W27-3U-Jbt">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-rc-rt7">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY3-mW-Jn3">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pH9-IS-zQV">
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="YQV-Gg-9ht"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSO-zC-JJW">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" constant="8" id="5tL-hA-TRE"/>
-                    <constraint firstItem="sZO-o4-GbZ" firstAttribute="top" secondItem="1pS-bz-UNT" secondAttribute="top" id="9TI-Tp-8EK"/>
-                    <constraint firstItem="1pS-bz-UNT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MkR-Is-LmE"/>
-                    <constraint firstItem="1pS-bz-UNT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="csR-Oh-a9v"/>
-                    <constraint firstItem="sZO-o4-GbZ" firstAttribute="leading" secondItem="1pS-bz-UNT" secondAttribute="trailing" constant="8" id="p1G-C5-Ehh"/>
+                    <constraint firstItem="7ge-wY-0VY" firstAttribute="top" secondItem="WY3-mW-Jn3" secondAttribute="top" id="1re-xe-NXI"/>
+                    <constraint firstItem="pH9-IS-zQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3CT-Ql-AJ7"/>
+                    <constraint firstAttribute="bottom" secondItem="7ge-wY-0VY" secondAttribute="bottom" constant="8" id="3Re-rs-IG1"/>
+                    <constraint firstItem="1ga-z0-nfo" firstAttribute="top" secondItem="tSO-zC-JJW" secondAttribute="top" id="5ao-C3-JWe"/>
+                    <constraint firstItem="s43-5m-XhB" firstAttribute="leading" secondItem="1pS-bz-UNT" secondAttribute="leading" id="BNB-25-REb"/>
+                    <constraint firstItem="tSO-zC-JJW" firstAttribute="top" secondItem="LuL-rc-rt7" secondAttribute="bottom" constant="8" id="FZ1-Ea-n5P"/>
+                    <constraint firstItem="1ga-z0-nfo" firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" id="GLa-LX-X2u"/>
+                    <constraint firstAttribute="bottom" secondItem="pH9-IS-zQV" secondAttribute="bottom" id="Gm4-eD-9yK"/>
+                    <constraint firstAttribute="trailing" secondItem="pH9-IS-zQV" secondAttribute="trailing" id="Jc6-mV-rFn"/>
+                    <constraint firstItem="0JV-W6-YVe" firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" id="Qka-Np-17y"/>
+                    <constraint firstItem="LuL-rc-rt7" firstAttribute="leading" secondItem="W27-3U-Jbt" secondAttribute="leading" id="Qxh-Ls-bs3"/>
+                    <constraint firstItem="0JV-W6-YVe" firstAttribute="top" secondItem="s43-5m-XhB" secondAttribute="top" id="ShV-TO-Sbh"/>
+                    <constraint firstItem="sZO-o4-GbZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="TEn-16-56O"/>
+                    <constraint firstItem="1pS-bz-UNT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ULv-7H-axC"/>
+                    <constraint firstItem="5s7-4O-Kkd" firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" id="V3s-rN-DmS"/>
+                    <constraint firstItem="7ge-wY-0VY" firstAttribute="leading" secondItem="WY3-mW-Jn3" secondAttribute="trailing" constant="8" id="Vbk-fJ-m9Y"/>
+                    <constraint firstItem="5s7-4O-Kkd" firstAttribute="leading" secondItem="W27-3U-Jbt" secondAttribute="trailing" constant="8" id="WBs-xR-LEr"/>
+                    <constraint firstItem="7ge-wY-0VY" firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" id="WsU-41-v9E"/>
+                    <constraint firstItem="0JV-W6-YVe" firstAttribute="leading" secondItem="s43-5m-XhB" secondAttribute="trailing" constant="8" id="X1O-lf-db9"/>
+                    <constraint firstItem="5s7-4O-Kkd" firstAttribute="top" secondItem="W27-3U-Jbt" secondAttribute="top" id="b2c-oa-QHd"/>
+                    <constraint firstItem="W27-3U-Jbt" firstAttribute="top" secondItem="0JV-W6-YVe" secondAttribute="bottom" constant="8" id="ele-d7-Yfm"/>
+                    <constraint firstItem="1ga-z0-nfo" firstAttribute="leading" secondItem="tSO-zC-JJW" secondAttribute="trailing" constant="8" id="h22-II-wLC"/>
+                    <constraint firstItem="W27-3U-Jbt" firstAttribute="leading" secondItem="s43-5m-XhB" secondAttribute="leading" id="iwo-iv-Qfr"/>
+                    <constraint firstItem="WY3-mW-Jn3" firstAttribute="leading" secondItem="tSO-zC-JJW" secondAttribute="leading" id="kVX-2u-52a"/>
+                    <constraint firstItem="1pS-bz-UNT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="l6x-dO-9JM"/>
+                    <constraint firstItem="tSO-zC-JJW" firstAttribute="leading" secondItem="LuL-rc-rt7" secondAttribute="leading" id="lpt-rU-qcp"/>
+                    <constraint firstItem="sZO-o4-GbZ" firstAttribute="leading" secondItem="1pS-bz-UNT" secondAttribute="trailing" constant="8" id="lwP-wf-PZV"/>
+                    <constraint firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" constant="8" id="m8d-YU-gBb"/>
+                    <constraint firstItem="HOb-IZ-tBR" firstAttribute="trailing" secondItem="sZO-o4-GbZ" secondAttribute="trailing" id="pOu-W2-Yi1"/>
+                    <constraint firstItem="LuL-rc-rt7" firstAttribute="top" secondItem="5s7-4O-Kkd" secondAttribute="bottom" constant="8" id="thL-Aa-uL4"/>
+                    <constraint firstItem="HOb-IZ-tBR" firstAttribute="top" secondItem="LuL-rc-rt7" secondAttribute="top" id="vd4-Wu-z7I"/>
+                    <constraint firstItem="WY3-mW-Jn3" firstAttribute="top" secondItem="1ga-z0-nfo" secondAttribute="bottom" constant="8" id="x81-wP-Agy"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="airlineLbl" destination="sZO-o4-GbZ" id="WgR-Vr-VmS"/>
+                <outlet property="arrivalAirportLbl" destination="5s7-4O-Kkd" id="aSk-ed-cof"/>
+                <outlet property="arrivalDateLbl" destination="1ga-z0-nfo" id="e1y-Ib-xUA"/>
+                <outlet property="departureAirportLbl" destination="0JV-W6-YVe" id="b8O-tU-UOC"/>
+                <outlet property="depatureDateLbl" destination="HOb-IZ-tBR" id="WOv-vV-vWj"/>
+                <outlet property="priceLbl" destination="7ge-wY-0VY" id="zeS-yi-JJK"/>
+            </connections>
+            <point key="canvasLocation" x="57.5" y="-60.5"/>
         </tableViewCell>
     </objects>
 </document>
