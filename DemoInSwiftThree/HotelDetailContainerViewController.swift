@@ -112,7 +112,7 @@ class HotelDetailContainerViewController: UIViewController {
         
         let scrollViews: [String: UIView] = ["scrollView": self.paneScrollView!]
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: [], metrics: nil, views: scrollViews))
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-64-[scrollView]|", options: [], metrics: nil, views: scrollViews))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-64-[scrollView]-40-|", options: [], metrics: nil, views: scrollViews))
         self.view.layoutIfNeeded()
     
         
@@ -128,6 +128,12 @@ class HotelDetailContainerViewController: UIViewController {
         self.hotelTableViewHeightCS = constraints[1]
         self.paneScrollView?.addConstraints(constraints)
         self.view.layoutIfNeeded()
+    }
+    
+    // MARK: - IBActions 
+    
+    @IBAction private func checkFlights() {
+        self.navigationController?.pushViewController(FlightsViewController(), animated: true)
     }
 }
 

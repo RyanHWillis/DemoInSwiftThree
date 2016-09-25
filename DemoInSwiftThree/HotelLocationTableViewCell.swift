@@ -9,12 +9,14 @@
 import UIKit
 
 class HotelLocationTableViewCell: HotelTableViewCell {
+    
+    @IBOutlet weak internal var locationLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func refresh(withHotel hotel: Hotel) {
-        
+        self.locationLbl.text = hotel.location ?? "N/A"
     }
 }

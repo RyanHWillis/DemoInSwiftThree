@@ -9,13 +9,15 @@
 import UIKit
 
 class HotelDescriptionTableViewCell: HotelTableViewCell {
+    
+    @IBOutlet weak internal var descriptionLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func refresh(withHotel hotel: Hotel) {
-        
+        self.descriptionLbl.text = hotel.description ?? "N/A"
     }
     
 }

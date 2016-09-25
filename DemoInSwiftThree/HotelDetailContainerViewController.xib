@@ -15,7 +15,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i48-bH-iS1" customClass="DefaultButton" customModule="DemoInSwiftThree" customModuleProvider="target">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="i6d-s8-tYI"/>
+                    </constraints>
+                    <state key="normal" title="Check for Flights"/>
+                    <connections>
+                        <action selector="checkFlights" destination="-1" eventType="touchUpInside" id="BIN-cK-PGt"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="i48-bH-iS1" secondAttribute="bottom" id="hQS-Nx-kce"/>
+                <constraint firstAttribute="trailing" secondItem="i48-bH-iS1" secondAttribute="trailing" id="hhm-zO-ZMV"/>
+                <constraint firstItem="i48-bH-iS1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n4X-v8-EBK"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

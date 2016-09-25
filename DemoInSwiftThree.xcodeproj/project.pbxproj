@@ -37,6 +37,9 @@
 		35EA61451D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61431D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift */; };
 		35EA61461D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA61441D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib */; };
 		35EA61481D97CF78007208B0 /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61471D97CF78007208B0 /* HotelTableViewCell.swift */; };
+		35EA614C1D983415007208B0 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA614B1D983415007208B0 /* DefaultButton.swift */; };
+		35EA61511D983780007208B0 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA614F1D983780007208B0 /* FlightsViewController.swift */; };
+		35EA61521D983780007208B0 /* FlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA61501D983780007208B0 /* FlightsViewController.xib */; };
 		AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,9 @@
 		35EA61431D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelFacilitiesTableViewCell.swift; sourceTree = "<group>"; };
 		35EA61441D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelFacilitiesTableViewCell.xib; sourceTree = "<group>"; };
 		35EA61471D97CF78007208B0 /* HotelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		35EA614B1D983415007208B0 /* DefaultButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		35EA614F1D983780007208B0 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		35EA61501D983780007208B0 /* FlightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightsViewController.xib; sourceTree = "<group>"; };
 		3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.release.xcconfig"; sourceTree = "<group>"; };
 		8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +160,7 @@
 				35EA611F1D96F211007208B0 /* Service */,
 				35EA61241D96F58A007208B0 /* Model */,
 				35CE047E1D9695AC0087B0D0 /* Main */,
+				35EA614A1D983403007208B0 /* UIView */,
 				35CE04541D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld */,
 				35CE047F1D9695D70087B0D0 /* Supporting Files */,
 			);
@@ -181,10 +188,8 @@
 		35CE047E1D9695AC0087B0D0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */,
-				35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */,
-				35EA61361D97CEAB007208B0 /* HeaderImage */,
-				35EA61351D97CE9E007208B0 /* TableViewDetail */,
+				35EA614D1D983749007208B0 /* Hotel */,
+				35EA614E1D983769007208B0 /* Flight */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -255,6 +260,34 @@
 				35EA61441D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		35EA614A1D983403007208B0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				35EA614B1D983415007208B0 /* DefaultButton.swift */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		35EA614D1D983749007208B0 /* Hotel */ = {
+			isa = PBXGroup;
+			children = (
+				35CE04801D9698220087B0D0 /* HotelDetailContainerViewController.swift */,
+				35CE04811D9698220087B0D0 /* HotelDetailContainerViewController.xib */,
+				35EA61361D97CEAB007208B0 /* HeaderImage */,
+				35EA61351D97CE9E007208B0 /* TableViewDetail */,
+			);
+			name = Hotel;
+			sourceTree = "<group>";
+		};
+		35EA614E1D983769007208B0 /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				35EA614F1D983780007208B0 /* FlightsViewController.swift */,
+				35EA61501D983780007208B0 /* FlightsViewController.xib */,
+			);
+			name = Flight;
 			sourceTree = "<group>";
 		};
 		9DFD882F8EC4DD89906FEFC9 /* Pods */ = {
@@ -392,6 +425,7 @@
 				35EA613E1D97CF27007208B0 /* HotelLocationTableViewCell.xib in Resources */,
 				35EA612E1D9710F2007208B0 /* ImagesHeaderView.xib in Resources */,
 				35EA61421D97CF39007208B0 /* HotelDescriptionTableViewCell.xib in Resources */,
+				35EA61521D983780007208B0 /* FlightsViewController.xib in Resources */,
 				35EA61461D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA61511D983780007208B0 /* FlightsViewController.swift in Sources */,
 				35EA61391D97CF1B007208B0 /* HotelNameTableViewCell.swift in Sources */,
 				35EA61451D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift in Sources */,
 				35EA61281D96F70C007208B0 /* Hotel.swift in Sources */,
@@ -480,6 +515,7 @@
 				35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */,
 				35EA612C1D9710DD007208B0 /* ImagesHeaderView.swift in Sources */,
 				35EA61341D97CCC2007208B0 /* HotelDetailTableView.swift in Sources */,
+				35EA614C1D983415007208B0 /* DefaultButton.swift in Sources */,
 				35CE044E1D9695970087B0D0 /* AppDelegate.swift in Sources */,
 				35CE04821D9698220087B0D0 /* HotelDetailContainerViewController.swift in Sources */,
 				35EA612A1D970A9E007208B0 /* Flight.swift in Sources */,

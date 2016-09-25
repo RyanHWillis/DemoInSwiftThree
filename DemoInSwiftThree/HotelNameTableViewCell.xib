@@ -8,26 +8,39 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HotelNameTableViewCell" customModule="DemoInSwiftThree" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="KGk-i7-Jjw" customClass="HotelNameTableViewCell" customModule="DemoInSwiftThree" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="182"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="421" height="181.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hotel.name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-Cj-nZG">
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@hotel.name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-Cj-nZG">
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="34"/>
                         <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="NAME:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-xB-gg5">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uC5-Cj-nZG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="LSp-QV-if0"/>
+                    <constraint firstItem="uC5-Cj-nZG" firstAttribute="top" secondItem="APc-xB-gg5" secondAttribute="bottom" constant="8" id="3ft-e5-9lK"/>
+                    <constraint firstAttribute="trailing" secondItem="APc-xB-gg5" secondAttribute="trailing" constant="8" id="LnF-YN-zx8"/>
+                    <constraint firstItem="APc-xB-gg5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Xg3-0l-dc0"/>
+                    <constraint firstItem="APc-xB-gg5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eH9-h2-wNs"/>
                     <constraint firstAttribute="trailing" secondItem="uC5-Cj-nZG" secondAttribute="trailing" constant="8" id="hj5-MZ-gXY"/>
                     <constraint firstItem="uC5-Cj-nZG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qAr-VX-yta"/>
                     <constraint firstAttribute="bottom" secondItem="uC5-Cj-nZG" secondAttribute="bottom" constant="8" id="wPC-uC-Hrj"/>
+                    <constraint firstItem="APc-xB-gg5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yvp-Th-UQu"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="uC5-Cj-nZG" id="bWA-eP-CFl"/>
+            </connections>
+            <point key="canvasLocation" x="84.5" y="123"/>
         </tableViewCell>
     </objects>
 </document>
