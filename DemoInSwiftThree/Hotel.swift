@@ -15,7 +15,7 @@ class Hotel: JSONParseable {
     public var description: String?
     public var images: [URL]?
     public var rating: Int?
-    public var facilties: [String]?
+    public var facilities: [String]?
     
     static func createModel(withDictionary dict: Dictionary<String, AnyObject>) -> Any {
         let model = Hotel()
@@ -24,21 +24,16 @@ class Hotel: JSONParseable {
         model.location = dict["hotel_location"] as? String
         model.description = dict["description"] as? String
         
-        if let images = dict["images"] as? NSArray {
+        if let images = dict["images"] as? [String] {
+            model.images = [URL]()
             for image in images {
-                guard let imgString = image as? String, let url = URL(string: imgString) else { break }
+                guard let url = URL(string: image) else { break }
                 model.images?.append(url)
             }
         }
         
         model.rating = dict["rating"] as? Int
-        
-        if let facilities = dict["facilities"] as? NSArray {
-            for facility in facilities {
-                guard let fac = facility as? String else { break }
-                model.facilties?.append(fac)
-            }
-        }
+        model.facilities = dict["facilities"] as? [String]
         
         return model
     }

@@ -20,7 +20,18 @@ extension APIController {
         let request = BasicRequest(endpoint: APIEndpoints.Hotels, objectId: nil, method: .get, authenticationRequired: true, parameters: nil)
         
         APIController.execute(request: request, success: { (responseSuccess) in
+        
+            guard let data = responseSuccess.json() else {
+                completion(nil)
+                return
+            }
             
+            guard let hotel = Hotel.createModel(withDictionary: data) as? Hotel else {
+                completion(nil)
+                return
+            }
+            
+            completion(hotel)
             
             
         }) { (responseFailure) in

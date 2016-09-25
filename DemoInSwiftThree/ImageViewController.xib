@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="DemoInSwiftThree" customModuleProvider="target">
             <connections>
+                <outlet property="hotelImageView" destination="bL9-YT-V6X" id="JD5-LP-TD5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-cj-WE2"/>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape-sunset-blue-sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="bL9-YT-V6X"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bL9-YT-V6X"/>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -33,7 +34,4 @@
             <point key="canvasLocation" x="102" y="-138.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="landscape-sunset-blue-sunrise" width="2144" height="1424"/>
-    </resources>
 </document>

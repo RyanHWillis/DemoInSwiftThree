@@ -20,13 +20,10 @@ public extension APIController {
 }
 
 public extension DataResponse {
-    func responsePayload() -> Dictionary<String, AnyObject>? {
+    func json() -> Dictionary<String, AnyObject>? {
         guard let json = self.result.value as? Dictionary<String, AnyObject> else {
             return nil
         }
-        guard let responsePayload = json["response_payload"] as? Dictionary<String, AnyObject> else {
-            return nil
-        }
-        return responsePayload
+        return json
     }
 }
