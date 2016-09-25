@@ -40,6 +40,11 @@
 		35EA614C1D983415007208B0 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA614B1D983415007208B0 /* DefaultButton.swift */; };
 		35EA61511D983780007208B0 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA614F1D983780007208B0 /* FlightsViewController.swift */; };
 		35EA61521D983780007208B0 /* FlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA61501D983780007208B0 /* FlightsViewController.xib */; };
+		35EA61551D9839FB007208B0 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61531D9839FB007208B0 /* FlightTableViewCell.swift */; };
+		35EA61561D9839FB007208B0 /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA61541D9839FB007208B0 /* FlightTableViewCell.xib */; };
+		35EA61581D983A56007208B0 /* APIController + Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61571D983A56007208B0 /* APIController + Flight.swift */; };
+		35EA615B1D983C2F007208B0 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA61591D983C2F007208B0 /* LoadingTableViewCell.swift */; };
+		35EA615C1D983C2F007208B0 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA615A1D983C2F007208B0 /* LoadingTableViewCell.xib */; };
 		AF80966CC024F1EF3FE07362 /* Pods_DemoInSwiftThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +106,11 @@
 		35EA614B1D983415007208B0 /* DefaultButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		35EA614F1D983780007208B0 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		35EA61501D983780007208B0 /* FlightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightsViewController.xib; sourceTree = "<group>"; };
+		35EA61531D9839FB007208B0 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
+		35EA61541D9839FB007208B0 /* FlightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightTableViewCell.xib; sourceTree = "<group>"; };
+		35EA61571D983A56007208B0 /* APIController + Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIController + Flight.swift"; sourceTree = "<group>"; };
+		35EA61591D983C2F007208B0 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		35EA615A1D983C2F007208B0 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		3AB26B8344BCF835D2E30321 /* Pods-DemoInSwiftThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.release.xcconfig"; sourceTree = "<group>"; };
 		8038E91B8763D903071464C0 /* Pods-DemoInSwiftThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoInSwiftThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoInSwiftThree/Pods-DemoInSwiftThree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +222,7 @@
 				35EA611A1D96C363007208B0 /* BasicRequest.swift */,
 				35EA611B1D96C363007208B0 /* APIController + Utils.swift */,
 				35EA61201D96F26E007208B0 /* APIController + Hotel.swift */,
+				35EA61571D983A56007208B0 /* APIController + Flight.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -286,6 +297,10 @@
 			children = (
 				35EA614F1D983780007208B0 /* FlightsViewController.swift */,
 				35EA61501D983780007208B0 /* FlightsViewController.xib */,
+				35EA61531D9839FB007208B0 /* FlightTableViewCell.swift */,
+				35EA61541D9839FB007208B0 /* FlightTableViewCell.xib */,
+				35EA61591D983C2F007208B0 /* LoadingTableViewCell.swift */,
+				35EA615A1D983C2F007208B0 /* LoadingTableViewCell.xib */,
 			);
 			name = Flight;
 			sourceTree = "<group>";
@@ -418,10 +433,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EA61321D9719A9007208B0 /* ImageViewController.xib in Resources */,
+				35EA61561D9839FB007208B0 /* FlightTableViewCell.xib in Resources */,
 				35CE045B1D9695970087B0D0 /* LaunchScreen.storyboard in Resources */,
 				35CE04831D9698220087B0D0 /* HotelDetailContainerViewController.xib in Resources */,
 				35EA613A1D97CF1B007208B0 /* HotelNameTableViewCell.xib in Resources */,
 				35CE04581D9695970087B0D0 /* Assets.xcassets in Resources */,
+				35EA615C1D983C2F007208B0 /* LoadingTableViewCell.xib in Resources */,
 				35EA613E1D97CF27007208B0 /* HotelLocationTableViewCell.xib in Resources */,
 				35EA612E1D9710F2007208B0 /* ImagesHeaderView.xib in Resources */,
 				35EA61421D97CF39007208B0 /* HotelDescriptionTableViewCell.xib in Resources */,
@@ -506,11 +523,14 @@
 				35EA611E1D96C363007208B0 /* APIController + Utils.swift in Sources */,
 				35EA611D1D96C363007208B0 /* BasicRequest.swift in Sources */,
 				35EA611C1D96C363007208B0 /* APIController.swift in Sources */,
+				35EA61581D983A56007208B0 /* APIController + Flight.swift in Sources */,
 				35EA61411D97CF39007208B0 /* HotelDescriptionTableViewCell.swift in Sources */,
 				35EA61261D96F5DF007208B0 /* JSONParseable.swift in Sources */,
 				35EA61481D97CF78007208B0 /* HotelTableViewCell.swift in Sources */,
 				35EA613D1D97CF27007208B0 /* HotelLocationTableViewCell.swift in Sources */,
+				35EA61551D9839FB007208B0 /* FlightTableViewCell.swift in Sources */,
 				35EA61231D96F2FA007208B0 /* APIEndpoints.swift in Sources */,
+				35EA615B1D983C2F007208B0 /* LoadingTableViewCell.swift in Sources */,
 				35EA61311D9719A9007208B0 /* ImageViewController.swift in Sources */,
 				35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */,
 				35EA612C1D9710DD007208B0 /* ImagesHeaderView.swift in Sources */,

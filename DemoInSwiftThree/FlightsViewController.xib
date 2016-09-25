@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightsViewController" customModule="DemoInSwiftThree" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="ScH-k2-XCz" id="dPG-am-ZW0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

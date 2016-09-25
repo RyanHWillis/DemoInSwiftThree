@@ -1,8 +1,8 @@
 //
-//  APIController + Hotel.swift
+//  APIController + Flight.swift
 //  DemoInSwiftThree
 //
-//  Created by Ryan Willis on 24/09/2016.
+//  Created by Ryan Willis on 25/09/2016.
 //  Copyright © 2016 RyanWillis. All rights reserved.
 //
 
@@ -15,23 +15,23 @@ extension APIController {
      Attempt to fetch all Hotels
      */
     
-    static func fetchHotel(completion: @escaping (_ hotels: Hotel?) -> ()) {
+    static func fetchFlights(completion: @escaping (_ flights: [Flight]?) -> ()) {
         
-        let request = BasicRequest(endpoint: APIEndpoints.Hotels, objectId: nil, method: .get, authenticationRequired: false, parameters: nil)
+        let request = BasicRequest(endpoint: APIEndpoints.Flights, objectId: nil, method: .get, authenticationRequired: false, parameters: nil)
         
         APIController.execute(request: request, success: { (responseSuccess) in
-        
-            guard let data = responseSuccess.result.value as? Dictionary<String, AnyObject> else {
+            
+            guard let data = responseSuccess.result.value as? [Dictionary<String, AnyObject>] else {
                 completion(nil)
                 return
             }
             
-            guard let hotel = Hotel.createModel(withDictionary: data) as? Hotel else {
+            guard let flights = Flight.createModels(withArray: data) as? [Flight] else {
                 completion(nil)
                 return
             }
             
-            completion(hotel)
+            completion(flights)
             
             
         }) { (responseFailure) in
