@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setInitialVC() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = HotelDetailContainerViewController()
+        self.window?.rootViewController = UINavigationController(rootViewController: HotelDetailContainerViewController())
         self.window?.makeKeyAndVisible()
     }
     

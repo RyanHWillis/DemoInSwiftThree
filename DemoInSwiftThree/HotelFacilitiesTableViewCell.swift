@@ -8,11 +8,13 @@
 
 import UIKit
 
-class HotelFacilitiesTableViewCell: UITableViewCell {
+class HotelFacilitiesTableViewCell: HotelTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
     }
-    
+
+    override func refresh(withHotel hotel: Hotel) {
+        
+    }
 }

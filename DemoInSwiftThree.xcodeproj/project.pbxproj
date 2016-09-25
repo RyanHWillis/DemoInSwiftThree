@@ -225,15 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				35EA61331D97CCC2007208B0 /* HotelDetailTableView.swift */,
-				35EA61371D97CF1B007208B0 /* HotelNameTableViewCell.swift */,
-				35EA61381D97CF1B007208B0 /* HotelNameTableViewCell.xib */,
-				35EA613B1D97CF27007208B0 /* HotelLocationTableViewCell.swift */,
-				35EA613C1D97CF27007208B0 /* HotelLocationTableViewCell.xib */,
-				35EA613F1D97CF39007208B0 /* HotelDescriptionTableViewCell.swift */,
-				35EA61401D97CF39007208B0 /* HotelDescriptionTableViewCell.xib */,
-				35EA61431D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift */,
-				35EA61441D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib */,
-				35EA61471D97CF78007208B0 /* HotelTableViewCell.swift */,
+				35EA61491D980B0E007208B0 /* Cells */,
 			);
 			name = TableViewDetail;
 			sourceTree = "<group>";
@@ -247,6 +239,22 @@
 				35EA61301D9719A9007208B0 /* ImageViewController.xib */,
 			);
 			name = HeaderImage;
+			sourceTree = "<group>";
+		};
+		35EA61491D980B0E007208B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				35EA61471D97CF78007208B0 /* HotelTableViewCell.swift */,
+				35EA61371D97CF1B007208B0 /* HotelNameTableViewCell.swift */,
+				35EA61381D97CF1B007208B0 /* HotelNameTableViewCell.xib */,
+				35EA613B1D97CF27007208B0 /* HotelLocationTableViewCell.swift */,
+				35EA613C1D97CF27007208B0 /* HotelLocationTableViewCell.xib */,
+				35EA613F1D97CF39007208B0 /* HotelDescriptionTableViewCell.swift */,
+				35EA61401D97CF39007208B0 /* HotelDescriptionTableViewCell.xib */,
+				35EA61431D97CF4D007208B0 /* HotelFacilitiesTableViewCell.swift */,
+				35EA61441D97CF4D007208B0 /* HotelFacilitiesTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9DFD882F8EC4DD89906FEFC9 /* Pods */ = {

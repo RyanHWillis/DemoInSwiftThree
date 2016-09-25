@@ -15,7 +15,7 @@ extension APIController {
      Attempt to fetch all Hotels
      */
     
-    static func fetchHotels(completion: @escaping (_ hotels: [Any]?) -> ()) {
+    static func fetchHotel(completion: @escaping (_ hotels: Hotel?) -> ()) {
         
         let request = BasicRequest(endpoint: APIEndpoints.Hotels, objectId: nil, method: .get, authenticationRequired: true, parameters: nil)
         

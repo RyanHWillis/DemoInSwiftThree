@@ -10,10 +10,12 @@ import UIKit
 
 class ImagesHeaderView: UIView {
     
-    var pageViewController: UIPageViewController!
+    fileprivate var pageViewController: UIPageViewController!
+    fileprivate var hotel: Hotel!
 
-    public class func createImagesHeaderView() -> ImagesHeaderView {
+    public class func createImagesHeaderView(withHotel hotel: Hotel) -> ImagesHeaderView {
         let loader = Bundle.main.loadNibNamed("ImagesHeaderView", owner: self, options: nil)?.first as! ImagesHeaderView
+        loader.hotel = hotel
         loader.setupPageController()
         return loader
     }

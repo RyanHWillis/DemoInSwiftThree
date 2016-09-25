@@ -8,7 +8,11 @@
 
 import UIKit
 
-public enum HotelTableCell {
+internal protocol HotelDetailTableViewDelegate: class {
+    func hotelDetailTableViewDidUpdate()
+}
+
+internal enum HotelTableCell {
     
     case name
     case location
@@ -28,19 +32,19 @@ public enum HotelTableCell {
         }
     }
     
-    func identifers() -> [String] {
-        return [HotelTableCell.name.identifer, HotelTableCell.location.identifer,
+    static let identifers = [HotelTableCell.name.identifer, HotelTableCell.location.identifer,
                 HotelTableCell.description.identifer, HotelTableCell.facilties.identifer]
-    }
 }
 
-private class HotelDetailTableView: UITableView {
+internal class HotelDetailTableView: UITableView {
     
-    private var hotel: Hotel!
+    fileprivate var hotel: Hotel!
+    fileprivate var detailDelegate: HotelDetailTableViewDelegate?
     
-    init(withHotel hotel: Hotel) {
+    init(withHotel hotel: Hotel, delegate: HotelDetailTableViewDelegate?) {
         super.init(frame: UIScreen.main.bounds, style: .plain)
         self.hotel = hotel
+        self.detailDelegate = delegate
         self.setup()
     }
     
@@ -51,24 +55,29 @@ private class HotelDetailTableView: UITableView {
         self.delegate = self
         self.dataSource = self
         self.isScrollEnabled = false
+        
+        for identifer in HotelTableCell.identifers {
+            self.register(UINib(nibName: identifer, bundle: Bundle.main), forCellReuseIdentifier: identifer)
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.detailDelegate?.hotelDetailTableViewDidUpdate()
     }
 }
 
 extension HotelDetailTableView: UITableViewDelegate, UITableViewDataSource {
     
-    fileprivate func numberOfSections(in tableView: UITableView) -> Int {
+    internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    fileprivate func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return HotelTableCell.identifers.count
     }
     
-    fileprivate func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
             return self.addHotelNameTableViewCell()
@@ -83,36 +92,37 @@ extension HotelDetailTableView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    fileprivate func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print(indexPath.row)
-        //self.paneDelegate?.detailPaneDidUpdate()
-        
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
-    fileprivate func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    internal func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
     // MARK: - Cells
     
-    private func addHotelNameTableViewCell() -> HotelNameTableViewCell {
-        let cell = self.dequeueReusableCell(withIdentifier: "HotelNameTableViewCell") as! HotelNameTableViewCell
+    fileprivate func addHotelNameTableViewCell() -> HotelNameTableViewCell {
+        let cell = self.dequeueReusableCell(withIdentifier: HotelTableCell.name.identifer) as! HotelNameTableViewCell
+        cell.refresh(withHotel: self.hotel)
         return cell
     }
     
-    private func addHotelLocationTableViewCell() -> HotelLocationTableViewCell {
-        let cell = self.dequeueReusableCell(withIdentifier: "HotelLocationTableViewCell") as! HotelLocationTableViewCell
+    fileprivate func addHotelLocationTableViewCell() -> HotelLocationTableViewCell {
+        let cell = self.dequeueReusableCell(withIdentifier: HotelTableCell.location.identifer) as! HotelLocationTableViewCell
+        cell.refresh(withHotel: self.hotel)
         return cell
     }
     
-    private func addHotelDescriptionTableViewCell() -> HotelDescriptionTableViewCell {
-        let cell = self.dequeueReusableCell(withIdentifier: "HotelDescriptionTableViewCell") as! HotelDescriptionTableViewCell
+    fileprivate func addHotelDescriptionTableViewCell() -> HotelDescriptionTableViewCell {
+        let cell = self.dequeueReusableCell(withIdentifier: HotelTableCell.description.identifer) as! HotelDescriptionTableViewCell
+        cell.refresh(withHotel: self.hotel)
         return cell
     }
     
-    private func addHotelFacilitiesTableViewCell() -> HotelFacilitiesTableViewCell {
-        let cell = self.dequeueReusableCell(withIdentifier: "HotelFacilitiesTableViewCell") as! HotelFacilitiesTableViewCell
+    fileprivate func addHotelFacilitiesTableViewCell() -> HotelFacilitiesTableViewCell {
+        let cell = self.dequeueReusableCell(withIdentifier: HotelTableCell.facilties.identifer) as! HotelFacilitiesTableViewCell
+        cell.refresh(withHotel: self.hotel)
         return cell
     }
 }

@@ -18,6 +18,6 @@ struct APIEndpoints {
     
     // MARK: - Auth
     
-    static let Hotels = "auth/login"
-    static let Flights = "auth/register"
+    static let Hotels = "f0Tm6bfy"
+    static let Flights = "bFnZQEx0"
 }
