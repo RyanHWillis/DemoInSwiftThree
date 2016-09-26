@@ -19,7 +19,7 @@ class HotelTest: XCTestCase {
         super.tearDown()
     }
     
-    func testInit_ShouldTakeName() {
+    func testInit_ShouldInitHotel() {
         
         let hotel = Hotel(name: "Hotel Resort", location: "Spain", description: "Beautiful, and close",
                           images: [URL(string: "www.google.com")!], rating: 5, facilities: ["Pool", "Spa"])

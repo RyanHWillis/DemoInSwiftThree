@@ -17,15 +17,6 @@ struct Hotel: JSONParseable {
     public var rating: Int?
     public var facilities: [String]?
     
-//    init(name: String, location: String?, description:String?, images: [URL]? = nil, rating: Int? = 0, facilities: [String]? = nil) {
-//        self.name = name
-//        self.location = location
-//        self.description = description
-//        self.images = images
-//        self.rating = rating
-//        self.facilities = facilities
-//    }
-    
     static func createModel(withDictionary dict: Dictionary<String, AnyObject>) -> Any {
         var model = Hotel()
         
