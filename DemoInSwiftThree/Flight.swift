@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Flight: JSONParseable {
+struct Flight: JSONParseable {
     
     public var airline: String?
     public var depatureDateRaw: String?
@@ -28,7 +28,7 @@ class Flight: JSONParseable {
     }()
     
     static func createModel(withDictionary dict: Dictionary<String, AnyObject>) -> Any {
-        let model = Flight()
+        var model = Flight()
         
         model.airline = dict["airline"] as? String
         model.price = dict["price"] as? Double

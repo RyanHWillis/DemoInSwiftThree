@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Hotel: JSONParseable {
+struct Hotel: JSONParseable {
     
     public var name: String?
     public var location: String?
@@ -18,7 +18,7 @@ class Hotel: JSONParseable {
     public var facilities: [String]?
     
     static func createModel(withDictionary dict: Dictionary<String, AnyObject>) -> Any {
-        let model = Hotel()
+        var model = Hotel()
         
         model.name = dict["name"] as? String
         model.location = dict["hotel_location"] as? String
