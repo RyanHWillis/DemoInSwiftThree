@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355C7C091D99899700B8A8FF /* HotelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C7C081D99899700B8A8FF /* HotelTest.swift */; };
+		355C7C0C1D999C2900B8A8FF /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C7C0B1D999C2900B8A8FF /* Date + Extension.swift */; };
 		35CE044E1D9695970087B0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE044D1D9695970087B0D0 /* AppDelegate.swift */; };
 		35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35CE04541D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld */; };
 		35CE04581D9695970087B0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CE04571D9695970087B0D0 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		16B289D7C41180ADB5439A5B /* Pods_DemoInSwiftThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoInSwiftThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		355C7C081D99899700B8A8FF /* HotelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelTest.swift; sourceTree = "<group>"; };
+		355C7C0B1D999C2900B8A8FF /* Date + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		35CE044A1D9695970087B0D0 /* DemoInSwiftThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoInSwiftThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CE044D1D9695970087B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CE04551D9695970087B0D0 /* DemoInSwiftThree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoInSwiftThree.xcdatamodel; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		355C7C0A1D999C1600B8A8FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				355C7C0B1D999C2900B8A8FF /* Date + Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		35CE04411D9695970087B0D0 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +183,7 @@
 				35EA61241D96F58A007208B0 /* Model */,
 				35CE047E1D9695AC0087B0D0 /* Main */,
 				35EA614A1D983403007208B0 /* UIView */,
+				355C7C0A1D999C1600B8A8FF /* Extensions */,
 				35CE04541D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld */,
 				35CE047F1D9695D70087B0D0 /* Supporting Files */,
 			);
@@ -181,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				35CE04651D9695970087B0D0 /* DemoInSwiftThreeTests.swift */,
+				355C7C081D99899700B8A8FF /* HotelTest.swift */,
 				35CE04671D9695970087B0D0 /* Info.plist */,
 			);
 			path = DemoInSwiftThreeTests;
@@ -534,6 +548,7 @@
 				35EA61311D9719A9007208B0 /* ImageViewController.swift in Sources */,
 				35CE04561D9695970087B0D0 /* DemoInSwiftThree.xcdatamodeld in Sources */,
 				35EA612C1D9710DD007208B0 /* ImagesHeaderView.swift in Sources */,
+				355C7C0C1D999C2900B8A8FF /* Date + Extension.swift in Sources */,
 				35EA61341D97CCC2007208B0 /* HotelDetailTableView.swift in Sources */,
 				35EA614C1D983415007208B0 /* DefaultButton.swift in Sources */,
 				35CE044E1D9695970087B0D0 /* AppDelegate.swift in Sources */,
@@ -547,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355C7C091D99899700B8A8FF /* HotelTest.swift in Sources */,
 				35CE04661D9695970087B0D0 /* DemoInSwiftThreeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

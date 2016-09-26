@@ -15,15 +15,25 @@ struct Flight: JSONParseable {
     public var arrivalDateRaw: String?
     public var depatureDate: Date?
     public var arrivalDate: Date?
-    public var price: Double?
+    public var depatureDateReadable: String?
+    public var arrivalDateReadable: String?
+    public var price: NSNumber?
+    public var priceReadable: String?
     public var depatureAirport: String?
     public var arrivalAirport: String?
     
     // MARK: - Helpers
     
-    private static var dateFormatter: DateFormatter = {
+    static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        return formatter
+    }()
+    
+    static var localCurrencyFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
         return formatter
     }()
     
@@ -31,22 +41,30 @@ struct Flight: JSONParseable {
         var model = Flight()
         
         model.airline = dict["airline"] as? String
-        model.price = dict["price"] as? Double
         model.depatureAirport = dict["departure_airport"] as? String
         model.arrivalAirport = dict["arrival_airport"] as? String
         
         if let depatureDateRaw = dict["departure_date"] as? String {
             model.depatureDateRaw = depatureDateRaw
-            if let depatureDateFormatted = Flight.dateFormatter.date(from: depatureDateRaw) {
-                model.depatureDate = depatureDateFormatted
+
+            if let dateFromString = depatureDateRaw.dateFromISO8601 {
+                model.depatureDate = dateFromString
+                model.depatureDateReadable = self.dateFormatter.string(from: dateFromString)
             }
         }
         
         if let arrivalDateRaw = dict["arrival_date"] as? String {
             model.arrivalDateRaw = arrivalDateRaw
-            if let arrivalDateFormatted = Flight.dateFormatter.date(from: arrivalDateRaw) {
-                model.arrivalDate = arrivalDateFormatted
+            
+            if let dateFromString = arrivalDateRaw.dateFromISO8601 {
+                model.arrivalDate = dateFromString
+                model.arrivalDateReadable = self.dateFormatter.string(from: dateFromString)
             }
+        }
+        
+        if let price = dict["price"] as? NSNumber {
+            model.price = price
+            model.priceReadable = self.localCurrencyFormatter.string(from: price)
         }
         
         return model
